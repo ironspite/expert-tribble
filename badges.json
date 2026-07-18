@@ -166,5 +166,79 @@
       "tooltip": "Illegalcord Cavia",
       "badge": "https://i.pinimg.com/736x/0f/a9/9a/0fa99af2c7f37b8c8454825751c7eeab.jpg"
     }
+  ],
+  "1484256634552193118": [
+    {
+      "tooltip": "Illegalcord Owner",
+      "badge": "https://i.pinimg.com/1200x/08/08/b7/0808b717977c0d086c1338a250184182.jpg"
+    },
+    {
+      "tooltip": "Antiflame",
+      "badge": "https://cdn.discordapp.com/icons/1450599121223417876/a_47edac138f9e9aea7aba69e87bc3da97.webp?size=512&animated=true"
+    },
+    {
+      "tooltip": "bhz.ltc",
+      "badge": "https://qu.ax/dc/4pmQt.gif"
+    },
+    {
+      "tooltip": "Cat",
+      "badge": "https://i.pinimg.com/736x/46/f4/88/46f4885495c1ed7ca2dbfd4787b06bb6.jpg"
+    },
+    {
+      "tooltip": "Catfish",
+      "badge": "https://i.pinimg.com/736x/c9/c1/41/c9c1412402b2aefd35460ab785bc115a.jpg"
+    },
+    {
+      "tooltip": "chill | no flame",
+      "badge": "https://i.pinimg.com/736x/29/76/ec/2976ece959255ffa6d0aa6bd8b098b7a.jpg"
+    },
+    {
+      "tooltip": "ETH",
+      "badge": "https://cdn.discordapp.com/icons/1464685360188621053/913c0ced545f85b90002bad49213b0d6.webp?size=512"
+    },
+    {
+      "tooltip": "FakeException",
+      "badge": "https://i.pinimg.com/736x/cf/c5/49/cfc549fb1bff2197427b30552e76d962.jpg"
+    },
+    {
+      "tooltip": "Hisako's Own's",
+      "badge": "https://i.pinimg.com/736x/82/df/ff/82dfff91432e2168e8d9fc2ab3559e88.jpg"
+    },
+    {
+      "tooltip": "Illegalcord Cavia",
+      "badge": "https://i.pinimg.com/736x/0f/a9/9a/0fa99af2c7f37b8c8454825751c7eeab.jpg"
+    },
+    {
+      "tooltip": "Illegalcord Contributor",
+      "badge": "https://i.pinimg.com/736x/bb/e5/53/bbe553e5ebac8c93c75b2673131af6f4.jpg"
+    },
+    {
+      "tooltip": "Incubo",
+      "badge": "https://qu.ax/dc/tWr0n.gif"
+    },
+    {
+      "tooltip": "Knifes",
+      "badge": "https://i.pinimg.com/originals/be/bd/65/bebd654ce3241d54b5f32d57659fff81.gif"
+    },
+    {
+      "tooltip": "Larperfinalboss",
+      "badge": "https://i.pinimg.com/736x/ea/60/da/ea60da6b304ad6dc0c265d5ccd843bd2.jpg"
+    },
+    {
+      "tooltip": "Meticolosa",
+      "badge": "https://i.pinimg.com/1200x/8c/76/14/8c761424f98d2625a3f913f914811f8b.jpg"
+    },
+    {
+      "tooltip": "Opsec Demon",
+      "badge": "https://i.pinimg.com/originals/74/1e/cd/741ecd47052dcf596c516cb99e265ff9.gif"
+    },
+    {
+      "tooltip": "Sayan",
+      "badge": "https://i.pinimg.com/1200x/58/77/53/58775386d4d567d6bbf50e8652c0995d.jpg"
+    },
+    {
+      "tooltip": "Verti",
+      "badge": "https://qu.ax/dc/aEBPw.jpg"
+    }
   ]
 }
