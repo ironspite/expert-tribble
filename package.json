@@ -3,13 +3,13 @@
     "private": "true",
     "version": "1.14.16.0",
     "description": "Illegalcord — Discord client mod fork of Equicord/Vencord with privacy and power-user plugins",
-    "homepage": "https://github.com/ironspite/Illegalcord#readme",
+    "homepage": "https://github.com/ironspite/expert-tribble#readme",
     "bugs": {
-        "url": "https://github.com/ironspite/Illegalcord/issues"
+        "url": "https://github.com/ironspite/expert-tribble/issues"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/ironspite/Illegalcord.git"
+        "url": "git+https://github.com/ironspite/expert-tribble.git"
     },
     "license": "GPL-3.0-or-later",
     "author": "ironspite",

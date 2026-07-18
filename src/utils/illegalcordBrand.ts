@@ -4,21 +4,19 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-/** Canonical Illegalcord GitHub ownership (ironspite fork / continuation). */
+/** Canonical Illegalcord GitHub ownership — full project lives on expert-tribble. */
 export const ILLEGALCORD_GITHUB_OWNER = "ironspite";
-export const ILLEGALCORD_GITHUB_REPO = "Illegalcord";
-export const ILLEGALCORD_ASSETS_REPO = "expert-tribble";
+export const ILLEGALCORD_GITHUB_REPO = "expert-tribble";
 
 export const ILLEGALCORD_GITHUB_SLUG = `${ILLEGALCORD_GITHUB_OWNER}/${ILLEGALCORD_GITHUB_REPO}`;
-export const ILLEGALCORD_ASSETS_SLUG = `${ILLEGALCORD_GITHUB_OWNER}/${ILLEGALCORD_ASSETS_REPO}`;
 
 export const ILLEGALCORD_REPO_URL = `https://github.com/${ILLEGALCORD_GITHUB_SLUG}`;
 export const ILLEGALCORD_CLONE_URL = `${ILLEGALCORD_REPO_URL}.git`;
 export const ILLEGALCORD_ISSUES_URL = `${ILLEGALCORD_REPO_URL}/issues`;
 export const ILLEGALCORD_SPONSOR_URL = `https://github.com/sponsors/${ILLEGALCORD_GITHUB_OWNER}`;
 
-/** Profile badge assets (public raw files). */
-export const ILLEGALCORD_ASSETS_BASE = `https://raw.githubusercontent.com/${ILLEGALCORD_ASSETS_SLUG}/main`;
+/** Profile badge assets (repo root raw files). */
+export const ILLEGALCORD_ASSETS_BASE = `https://raw.githubusercontent.com/${ILLEGALCORD_GITHUB_SLUG}/main`;
 export const ILLEGALCORD_BADGES_JSON_URL = `${ILLEGALCORD_ASSETS_BASE}/badges.json`;
 export const ILLEGALCORD_LOGO_URL = `${ILLEGALCORD_ASSETS_BASE}/Illegalcord.png`;
 

@@ -33,7 +33,7 @@ const BASE_DIR = join(dirname(fileURLToPath(import.meta.url)), "..");
 const FILE_DIR = join(BASE_DIR, "dist", "Installer");
 const LOCAL_INSTALLER_DIR = join(BASE_DIR, "IllegalcordInstaller", "dist");
 const ETAG_FILE = join(FILE_DIR, "etag.txt");
-const ILLEGALCORD_UA = "Illegalcord (https://github.com/ironspite/Illegalcord)";
+const ILLEGALCORD_UA = "Illegalcord (https://github.com/ironspite/expert-tribble)";
 
 function getFilename() {
     switch (process.platform) {

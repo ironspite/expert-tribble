@@ -105,8 +105,8 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
 Clona Illegalcord:
 
 ```shell
-git clone https://github.com/ironspite/Illegalcord
-cd Illegalcord
+git clone https://github.com/ironspite/expert-tribble
+cd expert-tribble
 ```
 
 Installa le dipendenze:

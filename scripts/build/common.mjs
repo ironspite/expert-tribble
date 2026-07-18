@@ -238,7 +238,7 @@ export const gitRemotePlugin = {
                         .replace("git@github.com:", "")
                         .replace(/.git$/, "");
                 } catch {
-                    remote = "ironspite/Illegalcord";
+                    remote = "ironspite/expert-tribble";
                 }
             }
 
