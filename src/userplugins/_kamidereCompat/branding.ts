@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-export { ILLEGALCORD_LOGO_URL as BRAND_ICON_URL, ILLEGALCORD_REPO_URL } from "@utils/illegalcordBrand";
+export { PROMISECORD_LOGO_URL as BRAND_ICON_URL, PROMISECORD_REPO_URL } from "@utils/promisecordBrand";
 
-export const BRAND_NAME = "Illegalcord";
+export const BRAND_NAME = "Promisecord";
 
 const brandIconSvg = [
     '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">',

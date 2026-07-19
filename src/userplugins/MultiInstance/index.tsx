@@ -330,7 +330,7 @@ function MultiInstanceModal({ rootProps }: { rootProps: RenderModalProps; }) {
             {...rootProps}
             size="xl"
             title="Multi Instance"
-            subtitle="Open separate Illegalcord windows, each with its own Discord login."
+            subtitle="Open separate Promisecord windows, each with its own Discord login."
         >
             <div className="vc-multi-instance-body">
                 {!Native && (
@@ -480,7 +480,7 @@ const MultiInstanceButtonWithBoundary = ErrorBoundary.wrap(MultiInstanceButton, 
 
 export default definePlugin({
     name: "MultiInstance",
-    description: "Opens extra Illegalcord windows with separate Discord sessions.",
+    description: "Opens extra Promisecord windows with separate Discord sessions.",
     authors: [{ name: "irritably", id: 928787166916640838n }],
     dependencies: ["HeaderBarAPI"],
     enabledByDefault: true,

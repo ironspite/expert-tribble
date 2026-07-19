@@ -31,7 +31,7 @@ export default function TutorialSettings() {
         <Card>
             <Flex alignItems="center" justifyContent="space-between" flexWrap="wrap" gap={10}>
                 <Flex flexDirection="column" gap={4}>
-                    <BaseText size="sm" weight="semibold">Illegalcord Tutorial</BaseText>
+                    <BaseText size="sm" weight="semibold">Promisecord Tutorial</BaseText>
                     <BaseText size="xs" color="text-muted">
                         {copy.settingsDescription}
                     </BaseText>

@@ -25,15 +25,15 @@ import { Readable } from "stream";
 import { finished } from "stream/promises";
 import { fileURLToPath } from "url";
 
-const BASE_URL = "https://github.com/ImHisako/IllegalcordInstaller/releases/latest/download/";
+const BASE_URL = "https://github.com/Equicord/Equilotl/releases/latest/download/";
 const INSTALLER_PATH_DARWIN = "Equilotl.app/Contents/MacOS/Equilotl";
 const INSTALLER_APP_DARWIN = "Equilotl.app";
 
 const BASE_DIR = join(dirname(fileURLToPath(import.meta.url)), "..");
 const FILE_DIR = join(BASE_DIR, "dist", "Installer");
-const LOCAL_INSTALLER_DIR = join(BASE_DIR, "IllegalcordInstaller", "dist");
+const LOCAL_INSTALLER_DIR = join(BASE_DIR, "PromisecordInstaller", "dist");
 const ETAG_FILE = join(FILE_DIR, "etag.txt");
-const ILLEGALCORD_UA = "Illegalcord (https://github.com/ironspite/expert-tribble)";
+const PROMISECORD_UA = "Promisecord (https://github.com/ironspite/expert-tribble)";
 
 function getFilename() {
     switch (process.platform) {
@@ -84,7 +84,7 @@ async function ensureBinary() {
 
     const res = await fetch(BASE_URL + filename, {
         headers: {
-            "User-Agent": ILLEGALCORD_UA,
+            "User-Agent": PROMISECORD_UA,
             "If-None-Match": etag
         }
     });

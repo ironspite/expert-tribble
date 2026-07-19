@@ -703,7 +703,7 @@ const keyManager = new KeyManager();
 
 export default definePlugin({
     name: "IGP",
-    description: "Illegalcord PGP encryption.",
+    description: "Promisecord PGP encryption.",
     authors: [{ name: "irritably", id: 928787166916640838n }],
     settings,
 

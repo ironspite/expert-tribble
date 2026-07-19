@@ -44,12 +44,12 @@ const ENGINES = {
 const DEFAULT_ENGINE = "qwant";
 const DEFAULT_FINGERPRINT_MODE = "semiRandom";
 const BROWSERLEAKS_URL = "https://browserleaks.com/";
-const PRIVATE_PARTITION_PREFIX = "illegalcord-private-search";
+const PRIVATE_PARTITION_PREFIX = "promisecord-private-search";
 const SPOOF_USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36";
 const UBLOCK_ORIGIN_RELEASES_API = "https://api.github.com/repos/gorhill/uBlock/releases?per_page=20";
 const UBLOCK_ORIGIN_DIR = join(DATA_DIR, "uBlockOriginElite");
 const UBLOCK_ORIGIN_VERSION_PATH = join(UBLOCK_ORIGIN_DIR, ".equicord-release");
-const PRELOAD_DIR = join(tmpdir(), "illegalcord-private-search-browser");
+const PRELOAD_DIR = join(tmpdir(), "promisecord-private-search-browser");
 const PRELOAD_PATH = join(PRELOAD_DIR, "preload.js");
 const MULLVAD_DNS = {
     dns: {
@@ -1248,7 +1248,7 @@ function getNavigationScript(homeUrl: string) {
 
     return `
         (() => {
-            const id = "illegalcord-private-search-nav";
+            const id = "promisecord-private-search-nav";
             document.getElementById(id)?.remove();
 
             const root = document.createElement("div");

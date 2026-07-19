@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-export const TUTORIAL_SEEN_KEY = "IllegalcordTutorial_seen_v1";
-export const TUTORIAL_LANGUAGE_KEY = "IllegalcordTutorial_language";
+export const TUTORIAL_SEEN_KEY = "PromisecordTutorial_seen_v1";
+export const TUTORIAL_LANGUAGE_KEY = "PromisecordTutorial_language";
 export const RECOMMENDED_PLUGIN_NAMES = ["Questify", "MessageLogger", "MessageLoggerEnhanced", "BetterScreenshare", "BetterMicrophone"] as const;
 
 export type Language = "en" | "it";
@@ -39,7 +39,7 @@ export const UI_COPY = {
         languageLabel: "Language",
         english: "English",
         italian: "Italiano",
-        reopenHint: "You can reopen this tutorial from the IllegalcordTutorial settings.",
+        reopenHint: "You can reopen this tutorial from the PromisecordTutorial settings.",
         settingsDescription: "Reopen the guided tutorial, jump to recommended plugins, or show the popup again on the next startup.",
         openTutorial: "Open tutorial",
         openRecommendations: "Recommended plugins",
@@ -69,7 +69,7 @@ export const UI_COPY = {
         languageLabel: "Lingua",
         english: "English",
         italian: "Italiano",
-        reopenHint: "Puoi riaprire questo tutorial dalle impostazioni di IllegalcordTutorial.",
+        reopenHint: "Puoi riaprire questo tutorial dalle impostazioni di PromisecordTutorial.",
         settingsDescription: "Riapri il tutorial guidato, vai ai plugin consigliati, o fai comparire il popup al prossimo avvio.",
         openTutorial: "Apri tutorial",
         openRecommendations: "Plugin consigliati",
@@ -119,8 +119,8 @@ export const UI_COPY = {
 export const TUTORIAL_STEPS: TutorialStep[] = [
     {
         title: {
-            en: "Welcome to Illegalcord",
-            it: "Benvenuta in Illegalcord"
+            en: "Welcome to Promisecord",
+            it: "Benvenuta in Promisecord"
         },
         route: {
             en: "First startup",
@@ -133,45 +133,45 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
         bullets: {
             en: [
                 "Open Discord user settings.",
-                "Scroll until you find Illegalcord Settings.",
+                "Scroll until you find Promisecord Settings.",
                 "Use the buttons in this tutorial to jump straight to the right page."
             ],
             it: [
                 "Apri le impostazioni utente di Discord.",
-                "Scorri fino a Illegalcord Settings.",
+                "Scorri fino a Promisecord Settings.",
                 "Usa i pulsanti del tutorial per aprire direttamente la pagina giusta."
             ]
         }
     },
     {
         title: {
-            en: "Illegalcord settings",
-            it: "Impostazioni Illegalcord"
+            en: "Promisecord settings",
+            it: "Impostazioni Promisecord"
         },
         route: {
-            en: "Settings > Illegalcord Settings",
-            it: "Settings > Illegalcord Settings"
+            en: "Settings > Promisecord Settings",
+            it: "Settings > Promisecord Settings"
         },
         body: {
-            en: "The Illegalcord section is the control room for the client. Start there when you want to change behavior or find a tool.",
-            it: "La sezione Illegalcord è la sala comandi del client. Parti da lì quando vuoi cambiare comportamento o trovare uno strumento."
+            en: "The Promisecord section is the control room for the client. Start there when you want to change behavior or find a tool.",
+            it: "La sezione Promisecord è la sala comandi del client. Parti da lì quando vuoi cambiare comportamento o trovare uno strumento."
         },
         bullets: {
             en: [
-                "Illegalcord contains general client settings.",
+                "Promisecord contains general client settings.",
                 "Plugins lists stock plugins, Equicord plugins, and userplugins.",
                 "Themes, Updater, Changelog, and Backup each have their own page."
             ],
             it: [
-                "Illegalcord contiene le impostazioni generali del client.",
+                "Promisecord contiene le impostazioni generali del client.",
                 "Plugins mostra plugin stock, plugin Equicord e userplugins.",
                 "Themes, Updater, Changelog e Backup hanno pagine dedicate."
             ]
         },
         panel: "equicord_main_panel",
         actionLabel: {
-            en: "Open Illegalcord",
-            it: "Apri Illegalcord"
+            en: "Open Promisecord",
+            it: "Apri Promisecord"
         }
     },
     {
@@ -180,8 +180,8 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
             it: "Plugin consigliati"
         },
         route: {
-            en: "Settings > Illegalcord Settings > Plugins",
-            it: "Settings > Illegalcord Settings > Plugins"
+            en: "Settings > Promisecord Settings > Plugins",
+            it: "Settings > Promisecord Settings > Plugins"
         },
         body: {
             en: "Plugins are optional modules. Search by name, open the settings gear, and enable the ones that fit how you use Discord.",
@@ -216,8 +216,8 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
             it: "Settings > Client diagnostics"
         },
         body: {
-            en: "If Illegalcord lags, freezes, or starts using too much memory, open Client Diagnostics before disabling random plugins.",
-            it: "Se Illegalcord lagga, si blocca, o usa troppa memoria, apri Client Diagnostics prima di disattivare plugin a caso."
+            en: "If Promisecord lags, freezes, or starts using too much memory, open Client Diagnostics before disabling random plugins.",
+            it: "Se Promisecord lagga, si blocca, o usa troppa memoria, apri Client Diagnostics prima di disattivare plugin a caso."
         },
         bullets: {
             en: [
@@ -231,7 +231,7 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
                 "Usa Plugin monitor quando un plugin ti sembra sospetto e vuoi numeri più precisi."
             ]
         },
-        panel: "illegalcord_client_diagnostics_panel",
+        panel: "promisecord_client_diagnostics_panel",
         actionLabel: {
             en: "Open Diagnostics",
             it: "Apri Diagnostics"
@@ -243,8 +243,8 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
             it: "Themes"
         },
         route: {
-            en: "Settings > Illegalcord Settings > Themes",
-            it: "Settings > Illegalcord Settings > Themes"
+            en: "Settings > Promisecord Settings > Themes",
+            it: "Settings > Promisecord Settings > Themes"
         },
         body: {
             en: "Themes controls the look of the client. You can enable local themes, online themes, and saved theme links.",
@@ -329,7 +329,7 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
                 "Leggi il pannello warning prima di cambiare metodo."
             ]
         },
-        panel: "illegalcord_stereo_installer_panel",
+        panel: "promisecord_stereo_installer_panel",
         actionLabel: {
             en: "Open StereoInstaller",
             it: "Apri StereoInstaller"
@@ -341,12 +341,12 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
             it: "Updater"
         },
         route: {
-            en: "Settings > Illegalcord Settings > Updater",
-            it: "Settings > Illegalcord Settings > Updater"
+            en: "Settings > Promisecord Settings > Updater",
+            it: "Settings > Promisecord Settings > Updater"
         },
         body: {
-            en: "Updater checks for Illegalcord updates. Use it when a patch breaks, the client crashes, or you want the newest fixes.",
-            it: "Updater controlla gli aggiornamenti di Illegalcord. Usalo quando una patch si rompe, il client crasha, o vuoi gli ultimi fix."
+            en: "Updater checks for Promisecord updates. Use it when a patch breaks, the client crashes, or you want the newest fixes.",
+            it: "Updater controlla gli aggiornamenti di Promisecord. Usalo quando una patch si rompe, il client crasha, o vuoi gli ultimi fix."
         },
         bullets: {
             en: [
@@ -372,8 +372,8 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
             it: "Changelog"
         },
         route: {
-            en: "Settings > Illegalcord Settings > Changelog",
-            it: "Settings > Illegalcord Settings > Changelog"
+            en: "Settings > Promisecord Settings > Changelog",
+            it: "Settings > Promisecord Settings > Changelog"
         },
         body: {
             en: "Changelog explains what changed after updates, including new plugins, changed settings, fixes, and removals.",
@@ -403,8 +403,8 @@ export const TUTORIAL_STEPS: TutorialStep[] = [
             it: "Backup & Restore"
         },
         route: {
-            en: "Settings > Illegalcord Settings > Backup & Restore",
-            it: "Settings > Illegalcord Settings > Backup & Restore"
+            en: "Settings > Promisecord Settings > Backup & Restore",
+            it: "Settings > Promisecord Settings > Backup & Restore"
         },
         body: {
             en: "Backup & Restore saves and restores settings, plugins, CSS, and local data. Use it before big experiments.",

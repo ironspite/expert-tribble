@@ -187,7 +187,7 @@ export async function openInstance(
     }
 
     try {
-        const savedPartition = `persist:illegalcord-mi-${profileId}`;
+        const savedPartition = `persist:promisecord-mi-${profileId}`;
         if (blockExternalTokenAccess) {
             const savedSes = session.fromPartition(savedPartition, { cache: true });
             await savedSes.clearStorageData();
@@ -197,7 +197,7 @@ export async function openInstance(
 
         const partition = saveSession
             ? savedPartition
-            : `illegalcord-mi-${profileId}-${Date.now()}`;
+            : `promisecord-mi-${profileId}-${Date.now()}`;
         const ses = session.fromPartition(partition, { cache: !blockExternalTokenAccess });
         configureSession(partition, ses);
 
@@ -313,7 +313,7 @@ export async function clearSavedSession(
     }
 
     try {
-        const partition = `persist:illegalcord-mi-${profileId}`;
+        const partition = `persist:promisecord-mi-${profileId}`;
         const ses = session.fromPartition(partition, { cache: true });
 
         await ses.clearStorageData();

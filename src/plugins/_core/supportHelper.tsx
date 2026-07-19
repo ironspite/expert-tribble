@@ -32,7 +32,7 @@ import customIdle from "@plugins/customIdle";
 import { gitHash, gitHashShort } from "@shared/vencordUserAgent";
 import { CONTRIB_ROLE_ID, Devs, DONOR_ROLE_ID, EQUICORD_TEAM, GUILD_ID, SUPPORT_CHANNEL_ID, SUPPORT_CHANNEL_IDS, VC_CONTRIB_ROLE_ID, VC_DONOR_ROLE_ID, VC_GUILD_ID, VC_REGULAR_ROLE_ID, VENCORD_CONTRIB_ROLE_ID } from "@utils/constants";
 import { sendMessage } from "@utils/discord";
-import { illegalcordCommitUrl } from "@utils/illegalcordBrand";
+import { promisecordCommitUrl } from "@utils/promisecordBrand";
 import { Logger } from "@utils/Logger";
 import { Margins } from "@utils/margins";
 import { isAnyPluginDev, isEquicordGuild, isEquicordSupport, isKnownIssuesCategory, isSupportChannel, tryOrElse } from "@utils/misc";
@@ -146,8 +146,8 @@ async function generateDebugInfoMessage() {
         : platformName();
 
     const info = {
-        Illegalcord:
-            `v${VERSION} • [${gitHashShort}](<${illegalcordCommitUrl(gitHash)}>)` +
+        Promisecord:
+            `v${VERSION} • [${gitHashShort}](<${promisecordCommitUrl(gitHash)}>)` +
             `${IS_EQUIBOP ? "" : SettingsPlugin.getVersionInfo()} - ${Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(BUILD_TIMESTAMP)}`,
         Client: `${RELEASE_CHANNEL} ~ ${clientString}`,
         Platform: platformDisplay

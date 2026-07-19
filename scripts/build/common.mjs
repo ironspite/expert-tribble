@@ -229,7 +229,7 @@ export const gitRemotePlugin = {
             namespace: "git-remote", path: args.path
         }));
         build.onLoad({ filter, namespace: "git-remote" }, async () => {
-            let remote = process.env.EQUICORD_REMOTE || process.env.ILLEGALCORD_REMOTE;
+            let remote = process.env.EQUICORD_REMOTE || process.env.PROMISECORD_REMOTE;
             if (!remote) {
                 try {
                     const res = await promisify(exec)("git remote get-url origin", { encoding: "utf-8" });

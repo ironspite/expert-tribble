@@ -24,15 +24,15 @@ async function openFirstRunTutorial() {
 }
 
 export default definePlugin({
-    name: "IllegalcordTutorial",
-    description: "Shows a first-run guided tutorial for Illegalcord features.",
+    name: "PromisecordTutorial",
+    description: "Shows a first-run guided tutorial for Promisecord features.",
     authors: [{ name: "irritably", id: 928787166916640838n }],
     required: true,
     enabledByDefault: true,
     settingsAboutComponent: SafeTutorialSettings,
     toolboxActions: {
-        "Open Illegalcord tutorial": openTutorial,
-        "Show Illegalcord tutorial next startup": resetTutorialSeen
+        "Open Promisecord tutorial": openTutorial,
+        "Show Promisecord tutorial next startup": resetTutorialSeen
     },
 
     start() {

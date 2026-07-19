@@ -23,7 +23,7 @@ import ErrorBoundary from "@components/ErrorBoundary";
 import { openContributorModal } from "@components/settings/tabs";
 import { Devs } from "@utils/constants";
 import { copyWithToast } from "@utils/discord";
-import { ILLEGALCORD_BADGES_JSON_URL, ILLEGALCORD_LOGO_URL } from "@utils/illegalcordBrand";
+import { PROMISECORD_BADGES_JSON_URL, PROMISECORD_LOGO_URL } from "@utils/promisecordBrand";
 import { Logger } from "@utils/Logger";
 import { shouldShowContributorBadge, shouldShowEquicordContributorBadge } from "@utils/misc";
 import definePlugin from "@utils/types";
@@ -31,12 +31,16 @@ import { ContextMenuApi, Menu, Toasts, UserStore } from "@webpack/common";
 
 import Plugins, { PluginMeta } from "~plugins";
 
-import { EquicordDonorModal, EquicordTranslatorModal, IllegalcordDonorModal, NightcordBadgeModal, TrashCordDonorModal, VencordDonorModal } from "./modals";
+import bundledPromisecordBadges from "./promisecordBadges.json";
+import { EquicordDonorModal, EquicordTranslatorModal, PromisecordDonorModal, NightcordBadgeModal, TrashCordDonorModal, VencordDonorModal } from "./modals";
 
 const CONTRIBUTOR_BADGE = "https://cdn.discordapp.com/emojis/1092089799109775453.png?size=64";
 const EQUICORD_CONTRIBUTOR_BADGE = "https://equicord.org/assets/favicon.png";
-const USERPLUGIN_CONTRIBUTOR_BADGE = ILLEGALCORD_LOGO_URL;
+const USERPLUGIN_CONTRIBUTOR_BADGE = PROMISECORD_LOGO_URL;
 const BadgeLogger = new Logger("BadgeAPI");
+
+/** jsDelivr mirror — more reliable than raw.githubusercontent.com inside Discord. */
+const PROMISECORD_BADGES_MIRROR_URL = "https://cdn.jsdelivr.net/gh/ironspite/expert-tribble@main/badges.json";
 
 const ContributorBadge: ProfileBadge = {
     id: "vencord_contributor_badge",
@@ -86,7 +90,7 @@ const UserPluginContributorBadge: ProfileBadge = {
 
 let DonorBadges = {} as Record<string, Array<Record<"tooltip" | "badge", string>>>;
 let EquicordDonorBadges = {} as Record<string, Array<Record<"tooltip" | "badge", string>>>;
-let IllegalcordDonorBadges = {} as Record<string, Array<Record<"tooltip" | "badge", string>>>;
+let PromisecordDonorBadges = bundledPromisecordBadges as Record<string, Array<Record<"tooltip" | "badge", string>>>;
 let NightcordBadges = {} as Record<string, Array<{
     icon: string;
     placeholder: string;
@@ -104,16 +108,34 @@ async function loadBadges(url: string, noCache = false) {
     return await res.json();
 }
 
+async function loadPromisecordBadges(noCache = false) {
+    const urls = [PROMISECORD_BADGES_MIRROR_URL, PROMISECORD_BADGES_JSON_URL];
+    for (const url of urls) {
+        try {
+            const data = await loadBadges(url, noCache);
+            if (data && typeof data === "object") {
+                PromisecordDonorBadges = data;
+                return;
+            }
+        } catch (e) {
+            BadgeLogger.warn(`Promisecord badges fetch failed (${url}):`, e);
+        }
+    }
+}
+
 async function loadAllBadges(noCache = false) {
     const sources = [
         { name: "Vencord", url: "https://badges.vencord.dev/badges.json", apply: (data: typeof DonorBadges) => { DonorBadges = data; } },
         { name: "Equicord", url: "https://badge.equicord.org/badges.json", apply: (data: typeof EquicordDonorBadges) => { EquicordDonorBadges = data; } },
-        { name: "Illegalcord", url: ILLEGALCORD_BADGES_JSON_URL, apply: (data: typeof IllegalcordDonorBadges) => { IllegalcordDonorBadges = data; } },
         { name: "Nightcord", url: "https://api.nightcord.st/badges", apply: (data: typeof NightcordBadges) => { NightcordBadges = data; } },
     ] as const;
 
-    const results = await Promise.allSettled(sources.map(s => loadBadges(s.url, noCache)));
-    results.forEach((result, i) => {
+    const results = await Promise.allSettled([
+        ...sources.map(s => loadBadges(s.url, noCache)),
+        loadPromisecordBadges(noCache),
+    ]);
+
+    results.slice(0, sources.length).forEach((result, i) => {
         const source = sources[i];
         if (result.status === "fulfilled") {
             source.apply(result.value);
@@ -292,9 +314,9 @@ export default definePlugin({
         } satisfies ProfileBadge));
     },
 
-    getIllegalcordDonorBadges(userId: string) {
-        return IllegalcordDonorBadges[userId]?.map((badge, idx) => ({
-            id: `illegalcord_donor_badge_${idx}`,
+    getPromisecordDonorBadges(userId: string) {
+        return PromisecordDonorBadges[userId]?.map((badge, idx) => ({
+            id: `promisecord_donor_badge_${idx}`,
             iconSrc: badge.badge,
             description: badge.tooltip,
             position: BadgePosition.START,
@@ -308,7 +330,7 @@ export default definePlugin({
                 ContextMenuApi.openContextMenu(event, () => <BadgeContextMenu badge={badge} />);
             },
             onClick(_event: React.MouseEvent, badge: ProfileBadge & BadgeUserArgs) {
-                return IllegalcordDonorModal(badge);
+                return PromisecordDonorModal(badge);
             },
         } satisfies ProfileBadge));
     },

@@ -21,7 +21,7 @@ interface SpringModule {
     Springs: object;
 }
 
-const logger = new Logger("HisakoOptimizations");
+const logger = new Logger("PromiseOptimizations");
 const domMethods = ["appendChild", "removeChild"] as const;
 const delayedClassNames = ["activity", "subText", "botText", "clanTag"] as const;
 const originalDomMethods = new Map<DomMethodName, ElementChildMethod>();
@@ -163,7 +163,7 @@ function restoreDomThrottling() {
 }
 
 export default definePlugin({
-    name: "Hisako's Optimizations",
+    name: "Promise's Optimizations",
     description: "Reduces expensive Discord UI animations and activity updates.",
     authors: [{ name: "irritably", id: 928787166916640838n }],
     tags: ["Utility", "Appearance"],

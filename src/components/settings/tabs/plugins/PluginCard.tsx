@@ -10,7 +10,7 @@ import { Settings } from "@api/Settings";
 import { CogWheel, InfoIcon } from "@components/Icons";
 import { AddonCard } from "@components/settings/AddonCard";
 import { classNameFactory } from "@utils/css";
-import { ILLEGALCORD_LOGO_URL } from "@utils/illegalcordBrand";
+import { PROMISECORD_LOGO_URL } from "@utils/promisecordBrand";
 import { Logger } from "@utils/Logger";
 import { Plugin } from "@utils/types";
 import { React, showToast, Toasts } from "@webpack/common";
@@ -111,7 +111,7 @@ export function PluginCard({ plugin, disabled, onRestartNeeded, onMouseEnter, on
         },
         {
             condition: isUserPlugin,
-            src: ILLEGALCORD_LOGO_URL,
+            src: PROMISECORD_LOGO_URL,
             alt: "User",
             title: "User Plugin"
         }

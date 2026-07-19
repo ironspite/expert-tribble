@@ -12,14 +12,14 @@ import { Button } from "@components/Button";
 import ErrorBoundary from "@components/ErrorBoundary";
 import { GithubIcon, OpenExternalIcon } from "@components/Icons";
 import { classNameFactory } from "@utils/css";
-import { ILLEGALCORD_REPO_URL } from "@utils/illegalcordBrand";
+import { PROMISECORD_REPO_URL } from "@utils/promisecordBrand";
 import definePlugin, { OptionType } from "@utils/types";
 import type { RenderModalProps } from "@vencord/discord-types";
 import { closeModal, Modal, openModal } from "@webpack/common";
 
-const TELEGRAM_URL = "https://t.me/Illegalcord";
-const GITHUB_URL = ILLEGALCORD_REPO_URL;
-const cl = classNameFactory("vc-illegalcord-announcements-");
+const TELEGRAM_URL = "https://t.me/promisecord";
+const GITHUB_URL = PROMISECORD_REPO_URL;
+const cl = classNameFactory("vc-promisecord-announcements-");
 const DISCORD_LOCK_UNLOCKED_EVENT = "vencord-discordlock-unlocked";
 
 let hasOpened = false;
@@ -29,7 +29,7 @@ let pendingForceOpen = false;
 const settings = definePluginSettings({
     showStartupModal: {
         type: OptionType.BOOLEAN,
-        description: "Show the Illegalcord announcements popup on startup.",
+        description: "Show the Promisecord announcements popup on startup.",
         default: true
     }
 });
@@ -55,11 +55,11 @@ function deferUntilDiscordUnlock(force: boolean) {
         const forceOpen = pendingForceOpen;
         pendingOpen = false;
         pendingForceOpen = false;
-        openIllegalcordAnnouncementModal(forceOpen);
+        openPromisecordAnnouncementModal(forceOpen);
     }, { once: true });
 }
 
-function IllegalcordAnnouncementModal({ modalProps }: AnnouncementModalProps) {
+function PromisecordAnnouncementModal({ modalProps }: AnnouncementModalProps) {
     const dismissForever = () => {
         settings.store.showStartupModal = false;
         modalProps.onClose();
@@ -69,8 +69,8 @@ function IllegalcordAnnouncementModal({ modalProps }: AnnouncementModalProps) {
         <Modal
             {...modalProps}
             size="md"
-            title={<BaseText tag="h2" size="lg" weight="semibold" className={cl("title")}>Illegalcord Updates</BaseText>}
-            subtitle="Join the Telegram for updates, announcements, issue notices, and a direct place to contact the Illegalcord maintainer."
+            title={<BaseText tag="h2" size="lg" weight="semibold" className={cl("title")}>Promisecord Updates</BaseText>}
+            subtitle="Join the Telegram for updates, announcements, issue notices, and a direct place to contact the Promisecord maintainer."
             actions={[
                 {
                     text: "Do not show again",
@@ -104,7 +104,7 @@ function IllegalcordAnnouncementModal({ modalProps }: AnnouncementModalProps) {
                         <div>
                             <BaseText size="md" weight="semibold">Source code</BaseText>
                             <BaseText tag="p" size="sm" color="text-muted">
-                                Star the GitHub repository if Illegalcord is useful to you.
+                                Star the GitHub repository if Promisecord is useful to you.
                             </BaseText>
                         </div>
                         <Button variant="secondary" onClick={() => openExternal(GITHUB_URL)} className={cl("action-button")}>
@@ -119,24 +119,24 @@ function IllegalcordAnnouncementModal({ modalProps }: AnnouncementModalProps) {
     );
 }
 
-const SafeIllegalcordAnnouncementModal = ErrorBoundary.wrap(IllegalcordAnnouncementModal, { noop: true });
+const SafePromisecordAnnouncementModal = ErrorBoundary.wrap(PromisecordAnnouncementModal, { noop: true });
 
-function IllegalcordAnnouncementSettings() {
+function PromisecordAnnouncementSettings() {
     return (
         <div className={cl("settings")}>
             <BaseText tag="p" size="sm" color="text-muted">
                 You can reopen the announcement popup here whenever you want.
             </BaseText>
-            <Button size="small" onClick={() => openIllegalcordAnnouncementModal(true)}>
+            <Button size="small" onClick={() => openPromisecordAnnouncementModal(true)}>
                 Open popup
             </Button>
         </div>
     );
 }
 
-const SafeIllegalcordAnnouncementSettings = ErrorBoundary.wrap(IllegalcordAnnouncementSettings, { noop: true });
+const SafePromisecordAnnouncementSettings = ErrorBoundary.wrap(PromisecordAnnouncementSettings, { noop: true });
 
-export function openIllegalcordAnnouncementModal(force = false) {
+export function openPromisecordAnnouncementModal(force = false) {
     if (!force && (!settings.store.showStartupModal || hasOpened)) return;
     if (isDiscordLockActive()) {
         deferUntilDiscordUnlock(force);
@@ -146,26 +146,26 @@ export function openIllegalcordAnnouncementModal(force = false) {
     hasOpened = true;
     const modalKey = openModal(modalProps => (
         <ErrorBoundary noop onError={() => closeModal(modalKey)}>
-            <SafeIllegalcordAnnouncementModal modalProps={modalProps} />
+            <SafePromisecordAnnouncementModal modalProps={modalProps} />
         </ErrorBoundary>
     ));
 }
 
 export default definePlugin({
-    name: "IllegalcordAnnouncements",
-    description: "Shows Illegalcord Telegram and GitHub announcements.",
+    name: "PromisecordAnnouncements",
+    description: "Shows Promisecord Telegram and GitHub announcements.",
     tags: ["Utility"],
     authors: [{ name: "irritably", id: 928787166916640838n }],
     required: true,
     enabledByDefault: true,
     settings,
-    settingsAboutComponent: SafeIllegalcordAnnouncementSettings,
+    settingsAboutComponent: SafePromisecordAnnouncementSettings,
     toolboxActions: {
-        "Open Illegalcord popup": () => openIllegalcordAnnouncementModal(true)
+        "Open Promisecord popup": () => openPromisecordAnnouncementModal(true)
     },
     flux: {
         POST_CONNECTION_OPEN() {
-            openIllegalcordAnnouncementModal();
+            openPromisecordAnnouncementModal();
         }
     }
 });

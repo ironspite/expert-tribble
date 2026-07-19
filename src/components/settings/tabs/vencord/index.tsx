@@ -185,7 +185,7 @@ function EquicordSettings() {
             ) : (
                 <SpecialCard
                     title="Support the Project"
-                    description="Please consider supporting the development of Illegalcord by sharing it!"
+                    description="Please consider supporting the development of Promisecord by sharing it!"
                     cardImage={donateImage}
                     backgroundImage={DONOR_BACKGROUND_IMAGE}
                     backgroundColor="#c3a3ce"
@@ -283,7 +283,7 @@ function EquicordSettings() {
     );
 }
 
-export default wrapTab(EquicordSettings, "Illegalcord Settings");
+export default wrapTab(EquicordSettings, "Promisecord Settings");
 
 export function isEquicordDonor(userId: string): boolean {
     const donorBadges = BadgeAPI.getEquicordDonorBadges(userId);

@@ -20,7 +20,7 @@ import { Button } from "@components/Button";
 import { Heart } from "@components/Heart";
 import { OpenExternalIcon } from "@components/Icons";
 import { openInviteModal } from "@utils/discord";
-import { ILLEGALCORD_REPO_URL } from "@utils/illegalcordBrand";
+import { PROMISECORD_REPO_URL } from "@utils/promisecordBrand";
 import { ButtonProps } from "@vencord/discord-types";
 import { showToast } from "@webpack/common";
 
@@ -29,7 +29,7 @@ export function DonateButton({
     className,
     ...props
 }: Partial<ButtonProps> & { equicord?: boolean; }) {
-    const link = equicord ? ILLEGALCORD_REPO_URL : "https://github.com/sponsors/Vendicated";
+    const link = equicord ? PROMISECORD_REPO_URL : "https://github.com/sponsors/Vendicated";
     return (
         <Button
             {...props}

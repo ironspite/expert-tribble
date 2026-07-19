@@ -23,7 +23,7 @@ const READY_TIMEOUT_MS = 20_000;
 const MAX_REDIRECTS = 3;
 const GITHUB_API_LATEST_RELEASE_URL = "https://api.github.com/repos/jannskiee/floe/releases/latest";
 const FLOE_REPO_DOWNLOAD_URL = "https://github.com/jannskiee/floe/releases/download";
-const REQUEST_HEADERS = { "User-Agent": "Illegalcord-FloeP2PService" };
+const REQUEST_HEADERS = { "User-Agent": "Promisecord-FloeP2PService" };
 const WINDOWS_SCRIPT_INSTALL_COMMAND = "irm https://floe.one/install.ps1 | iex";
 const logger = new Logger("FloeP2PServiceNative");
 

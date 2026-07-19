@@ -10,7 +10,7 @@ import { Heading } from "@components/Heading";
 import { Heart } from "@components/Heart";
 import { Paragraph } from "@components/Paragraph";
 import { DonateButton, TranslateButton } from "@components/settings";
-import { ILLEGALCORD_SPONSOR_URL } from "@utils/illegalcordBrand";
+import { PROMISECORD_SPONSOR_URL } from "@utils/promisecordBrand";
 import { Margins } from "@utils/margins";
 import { Modal, openModal } from "@webpack/common";
 
@@ -182,11 +182,11 @@ interface DonorBadgeModalProps {
     iconSrc?: string;
 }
 
-export function IllegalcordDonorModal(badge: DonorBadgeModalProps) {
+export function PromisecordDonorModal(badge: DonorBadgeModalProps) {
     openModal(props => (
         <ErrorBoundary noop onError={() => {
             props.onClose();
-            VencordNative.native.openExternal(ILLEGALCORD_SPONSOR_URL);
+            VencordNative.native.openExternal(PROMISECORD_SPONSOR_URL);
         }}>
             <Modal
                 {...props}
@@ -201,7 +201,7 @@ export function IllegalcordDonorModal(badge: DonorBadgeModalProps) {
                     >
                         <Flex justifyContent="center" alignItems="center" gap="0.5em">
                             <Heart />
-                            Illegalcord Supporter
+                            Promisecord Supporter
                         </Flex>
                     </Heading>
                 }
@@ -224,7 +224,7 @@ export function IllegalcordDonorModal(badge: DonorBadgeModalProps) {
                             </Paragraph>
                         )}
                         <Paragraph className={Margins.top20}>
-                            Thank you for supporting Illegalcord development! Your contribution helps keep this project alive and thriving.
+                            Thank you for supporting Promisecord development! Your contribution helps keep this project alive and thriving.
                         </Paragraph>
                     </div>
                 </div>

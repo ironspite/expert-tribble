@@ -107,7 +107,7 @@ export function _getBadges(args: BadgeUserArgs) {
 
     const donorBadges = BadgeAPIPlugin.getDonorBadges(args.userId);
     const equicordDonorBadges = BadgeAPIPlugin.getEquicordDonorBadges(args.userId);
-    const illegalcordDonorBadges = BadgeAPIPlugin.getIllegalcordDonorBadges(args.userId);
+    const promisecordDonorBadges = BadgeAPIPlugin.getPromisecordDonorBadges(args.userId);
     const nightcordBadges = BadgeAPIPlugin.getNightcordBadges(args.userId);
     // const TrashCordDonorBadges = BadgeAPIPlugin.getTrashCordDonorBadges(args.userId);
     const GlobalBadges = isPluginEnabled(globalBadges.name) ? globalBadges.getGlobalBadges(args.userId) : false;
@@ -140,9 +140,9 @@ export function _getBadges(args: BadgeUserArgs) {
         );
     }
 
-    if (illegalcordDonorBadges) {
+    if (promisecordDonorBadges) {
         badges.unshift(
-            ...illegalcordDonorBadges.map(badge => ({
+            ...promisecordDonorBadges.map(badge => ({
                 ...args,
                 ...badge,
             }))

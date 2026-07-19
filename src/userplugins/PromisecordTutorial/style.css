@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-.vc-illegalcord-tutorial-root {
+.vc-promisecord-tutorial-root {
     display: flex;
     container-type: inline-size;
     width: 100%;
@@ -14,44 +14,44 @@
     overflow-y: auto;
 }
 
-.vc-illegalcord-tutorial-language {
+.vc-promisecord-tutorial-language {
     padding-bottom: 2px;
 }
 
-.vc-illegalcord-tutorial-progress {
+.vc-promisecord-tutorial-progress {
     height: 6px;
     overflow: hidden;
     border-radius: 6px;
     background: var(--background-modifier-accent);
 }
 
-.vc-illegalcord-tutorial-progress-fill {
+.vc-promisecord-tutorial-progress-fill {
     height: 100%;
     border-radius: inherit;
     background: var(--interactive-active);
     transition: width 180ms ease;
 }
 
-.vc-illegalcord-tutorial-layout {
+.vc-promisecord-tutorial-layout {
     display: grid;
     grid-template-columns: minmax(140px, 170px) minmax(0, 1fr);
     gap: 12px;
     align-items: start;
 }
 
-.vc-illegalcord-tutorial-step-nav {
+.vc-promisecord-tutorial-step-nav {
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
 
-.vc-illegalcord-tutorial-step-button {
+.vc-promisecord-tutorial-step-button {
     width: 100%;
     justify-content: flex-start;
     text-align: left;
 }
 
-.vc-illegalcord-tutorial-step-index {
+.vc-promisecord-tutorial-step-index {
     display: inline-flex;
     min-width: 18px;
     justify-content: center;
@@ -59,31 +59,31 @@
     font-variant-numeric: tabular-nums;
 }
 
-.vc-illegalcord-tutorial-content {
+.vc-promisecord-tutorial-content {
     min-width: 0;
 }
 
-.vc-illegalcord-tutorial-main {
+.vc-promisecord-tutorial-main {
     display: flex;
     min-width: 0;
     flex-direction: column;
     gap: 12px;
 }
 
-.vc-illegalcord-tutorial-content-with-aside {
+.vc-promisecord-tutorial-content-with-aside {
     display: grid;
     grid-template-columns: 1fr;
     gap: 12px;
     align-items: start;
 }
 
-.vc-illegalcord-tutorial-panel {
+.vc-promisecord-tutorial-panel {
     box-sizing: border-box;
     min-width: 0;
     padding: 14px 16px;
 }
 
-.vc-illegalcord-tutorial-bullets {
+.vc-promisecord-tutorial-bullets {
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -94,11 +94,11 @@
     line-height: 18px;
 }
 
-.vc-illegalcord-tutorial-bullets li {
+.vc-promisecord-tutorial-bullets li {
     padding-left: 2px;
 }
 
-.vc-illegalcord-tutorial-recommendation-list {
+.vc-promisecord-tutorial-recommendation-list {
     display: flex;
     max-height: 280px;
     flex-direction: column;
@@ -107,15 +107,15 @@
     padding-right: 2px;
 }
 
-.vc-illegalcord-tutorial-recommendation-actions {
+.vc-promisecord-tutorial-recommendation-actions {
     row-gap: 6px;
 }
 
-.vc-illegalcord-tutorial-recommendations-panel {
+.vc-promisecord-tutorial-recommendations-panel {
     background: var(--background-secondary);
 }
 
-.vc-illegalcord-tutorial-recommendation-row {
+.vc-promisecord-tutorial-recommendation-row {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 8px;
@@ -126,37 +126,37 @@
     background: var(--background-primary);
 }
 
-.vc-illegalcord-tutorial-recommendation-row label {
+.vc-promisecord-tutorial-recommendation-row label {
     min-width: 0;
 }
 
 @container (min-width: 720px) {
-    .vc-illegalcord-tutorial-content-with-aside {
+    .vc-promisecord-tutorial-content-with-aside {
         grid-template-columns: minmax(0, 1fr) minmax(260px, 300px);
     }
 }
 
 @media (width <= 760px) {
-    .vc-illegalcord-tutorial-layout {
+    .vc-promisecord-tutorial-layout {
         grid-template-columns: 1fr;
     }
 
-    .vc-illegalcord-tutorial-step-nav {
+    .vc-promisecord-tutorial-step-nav {
         flex-direction: row;
         overflow-x: auto;
         padding-bottom: 2px;
     }
 
-    .vc-illegalcord-tutorial-step-button {
+    .vc-promisecord-tutorial-step-button {
         width: auto;
         min-width: 150px;
     }
 
-    .vc-illegalcord-tutorial-recommendation-row {
+    .vc-promisecord-tutorial-recommendation-row {
         grid-template-columns: 1fr;
     }
 
-    .vc-illegalcord-tutorial-panel {
+    .vc-promisecord-tutorial-panel {
         padding: 12px;
     }
 }

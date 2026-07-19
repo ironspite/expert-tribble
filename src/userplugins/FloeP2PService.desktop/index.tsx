@@ -34,7 +34,7 @@ function FloeP2PSettingsAbout() {
                 Floe was created by <MaskedLink href="https://github.com/jannskiee">https://github.com/jannskiee</MaskedLink>.
             </Paragraph>
             <Paragraph className={Margins.top8}>
-                This Illegalcord plugin was created by the creator of Illegalcord.
+                This Promisecord plugin was created by the creator of Promisecord.
             </Paragraph>
             <Paragraph className={Margins.top8}>
                 The plugin also includes the /floe command. Before sending or receiving files, use Install Floe CLI once. To open the Floe menu from chat, right-click the + button.

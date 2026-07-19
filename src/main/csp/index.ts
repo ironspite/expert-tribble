@@ -36,6 +36,10 @@ export const CspPolicies: PolicyMap = {
 
     "*.githack.com": ImageAndCssSrc, // githack (namely raw.githack.com), used by some themes
     "jsdelivr.net": ImageAndCssSrc, // jsDelivr, used by very few themes
+    "cdn.jsdelivr.net": ImageScriptsAndCssSrc, // jsDelivr CDN (Promisecord badges mirror)
+    "badge.equicord.org": ImageSrc, // Equicord donor badges
+    "qu.ax": ImageSrc, // Promisecord custom badge hosts
+    "*.qu.ax": ImageSrc,
 
     "fonts.googleapis.com": CssSrc, // Google Fonts, used by many themes
 
@@ -50,7 +54,6 @@ export const CspPolicies: PolicyMap = {
     // CDNs used for some things by Vencord.
     // FIXME: we really should not be using CDNs anymore
     "cdnjs.cloudflare.com": ImageScriptsAndCssSrc,
-    "cdn.jsdelivr.net": ImageScriptsAndCssSrc,
 
     // Function Specific
     "api.github.com": ConnectSrc, // used for updating Vencord itself

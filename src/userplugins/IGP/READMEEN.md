@@ -1,6 +1,6 @@
-# IGP - Illegalcord PGP Encryption Plugin
+# IGP - Promisecord PGP Encryption Plugin
 
-IGP (Illegalcord GPG/Pgp) is a powerful encryption plugin for Illegalcord that enables end-to-end encrypted messaging using PGP (Pretty Good Privacy) encryption.
+IGP (Promisecord GPG/Pgp) is a powerful encryption plugin for Promisecord that enables end-to-end encrypted messaging using PGP (Pretty Good Privacy) encryption.
 
 ## Features
 
@@ -27,7 +27,7 @@ To get started, you'll need to generate a PGP key pair:
 
 If you already have PGP keys:
 
-1. Go to Illegalcord settings
+1. Go to Promisecord settings
 2. Find the IGP plugin settings
 3. Paste your private and public keys in the appropriate fields
 
@@ -126,14 +126,14 @@ To see your key fingerprint:
 
 ## About the Plugin
 
-IGP was built specifically for the Illegalcord Discord mod, extending the Vencord plugin architecture. The plugin leverages the OpenPGP.js library to provide robust encryption capabilities directly within Discord.
+IGP was built specifically for the Promisecord Discord mod, extending the Vencord plugin architecture. The plugin leverages the OpenPGP.js library to provide robust encryption capabilities directly within Discord.
 
 ### Technical Implementation
 
 - **Encryption Library**: Uses OpenPGP.js loaded from CDN
 - **UI Components**: Built with Discord's native component system
-- **Storage**: Uses Illegalcord's DataStore API for key management
-- **Commands**: Integrated with Illegalcord's command system
+- **Storage**: Uses Promisecord's DataStore API for key management
+- **Commands**: Integrated with Promisecord's command system
 - **UI Integration**: Adds buttons to chat bar and message popovers
 
 ### Key Features Implemented

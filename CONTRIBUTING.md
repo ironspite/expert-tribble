@@ -44,7 +44,7 @@ Before starting your plugin:
 > [!WARNING]
 > Skipping these steps may result in your plugin being rejected, even if it is technically correct.
 
-## Illegalcord Rules
+## Promisecord Rules
 1. No Rules
 2. We made a fork not a plugin.
 

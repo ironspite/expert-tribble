@@ -70,9 +70,9 @@ const IslandType = {
 
 type IslandType = typeof IslandType[keyof typeof IslandType];
 
-const cl = classNameFactory("vc-illegalcord-dynamic-island-");
+const cl = classNameFactory("vc-promisecord-dynamic-island-");
 const NOTIFICATION_DURATION = 5000;
-const RUNTIME_KEY = Symbol.for("IllegalcordDynamicIsland.runtime");
+const RUNTIME_KEY = Symbol.for("PromisecordDynamicIsland.runtime");
 const SPOTIFY_IDLE_DURATION = 60_000;
 const SWIPE_MIN_DISTANCE = 48;
 const SWIPE_MIN_DURATION = 120;
@@ -444,7 +444,7 @@ function DynamicIsland() {
             <Clickable
                 className={cl("summary")}
                 aria-expanded={expanded}
-                aria-label="Illegalcord Dynamic Island"
+                aria-label="Promisecord Dynamic Island"
                 onClick={activateSummary}
                 onPointerCancel={() => { swipeStartRef.current = null; }}
                 onPointerDown={beginSwipe}
@@ -458,7 +458,7 @@ function DynamicIsland() {
                             ? <img key={primaryTrack.album.image.url} className={cl("summary-cover")} src={primaryTrack.album.image.url} alt="" draggable={false} />
                             : <IslandIcon className={cl("summary-icon")} />}
                 <div key={notification?.id ?? primary ?? "idle"} className={cl("summary-copy")}>
-                    <strong>{notification?.title ?? (primaryStream ? "You are sharing your screen" : primaryTrack?.name ?? (primaryChannelId ? "Discord call" : "Illegalcord Dynamic Island"))}</strong>
+                    <strong>{notification?.title ?? (primaryStream ? "You are sharing your screen" : primaryTrack?.name ?? (primaryChannelId ? "Discord call" : "Promisecord Dynamic Island"))}</strong>
                     <span>{notification?.body ?? (primaryStream
                         ? <>Live for <ScreenShareTimer startedAt={streamStartedAt} /></>
                         : primaryTrack
@@ -525,7 +525,7 @@ function DynamicIslandPortal() {
 const SafeDynamicIsland = ErrorBoundary.wrap(DynamicIslandPortal, { noop: true });
 
 export default definePlugin({
-    name: "IllegalcordDynamicIsland",
+    name: "PromisecordDynamicIsland",
     description: "Adds a Dynamic Island for Spotify, calls, screen sharing, and notifications.",
     authors: [{ name: "irritably", id: 928787166916640838n }],
     tags: ["Media", "Voice"],

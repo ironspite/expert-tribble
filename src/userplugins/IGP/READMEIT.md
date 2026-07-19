@@ -1,6 +1,6 @@
-# IGP - Plugin di Crittografia PGP per Illegalcord
+# IGP - Plugin di Crittografia PGP per Promisecord
 
-IGP (Illegalcord GPG/Pgp) è un potente plugin di crittografia per Illegalcord che permette la messaggistica cifrata end-to-end utilizzando la crittografia PGP (Pretty Good Privacy).
+IGP (Promisecord GPG/Pgp) è un potente plugin di crittografia per Promisecord che permette la messaggistica cifrata end-to-end utilizzando la crittografia PGP (Pretty Good Privacy).
 
 ## Funzionalità
 
@@ -14,14 +14,14 @@ IGP (Illegalcord GPG/Pgp) è un potente plugin di crittografia per Illegalcord c
 
 ## Installazione
 
-1. Posiziona la cartella del plugin nella directory `userplugins` di Illegalcord:
+1. Posiziona la cartella del plugin nella directory `userplugins` di Promisecord:
    ```
-   Illegalcord/src/userplugins/igp/
+   Promisecord/src/userplugins/igp/
    ```
 
-2. Ricostruisci Illegalcord per includere il plugin
+2. Ricostruisci Promisecord per includere il plugin
 
-3. Abilita il plugin nelle impostazioni di Illegalcord
+3. Abilita il plugin nelle impostazioni di Promisecord
 
 ## Configurazione
 
@@ -38,7 +38,7 @@ Per iniziare, devi generare una coppia di chiavi PGP:
 
 Se hai già chiavi PGP:
 
-1. Vai alle impostazioni di Illegalcord
+1. Vai alle impostazioni di Promisecord
 2. Trova le impostazioni del plugin IGP
 3. Incolla le tue chiavi privata e pubblica nei campi appropriati
 
@@ -137,14 +137,14 @@ Per vedere l'impronta digitale della tua chiave:
 
 ## Informazioni sul Plugin
 
-IGP è stato sviluppato specificamente per la mod di Discord Illegalcord, estendendo l'architettura dei plugin Vencord. Il plugin sfrutta la libreria OpenPGP.js per fornire solide capacità di crittografia direttamente all'interno di Discord.
+IGP è stato sviluppato specificamente per la mod di Discord Promisecord, estendendo l'architettura dei plugin Vencord. Il plugin sfrutta la libreria OpenPGP.js per fornire solide capacità di crittografia direttamente all'interno di Discord.
 
 ### Implementazione Tecnica
 
 - **Libreria di crittografia**: Usa OpenPGP.js caricato da CDN
 - **Componenti UI**: Costruito con il sistema di componenti nativi di Discord
-- **Archiviazione**: Usa l'API DataStore di Illegalcord per la gestione delle chiavi
-- **Comandi**: Integrato con il sistema di comandi di Illegalcord
+- **Archiviazione**: Usa l'API DataStore di Promisecord per la gestione delle chiavi
+- **Comandi**: Integrato con il sistema di comandi di Promisecord
 - **Integrazione UI**: Aggiunge bottoni alla barra di chat e ai popup dei messaggi
 
 ### Funzionalità Chiave Implementate

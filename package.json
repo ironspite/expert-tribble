@@ -1,8 +1,8 @@
 {
-    "name": "illegalcord",
+    "name": "promisecord",
     "private": "true",
     "version": "1.14.16.0",
-    "description": "Illegalcord — Discord client mod fork of Equicord/Vencord with privacy and power-user plugins",
+    "description": "Promisecord — Discord client mod fork of Equicord/Vencord with privacy and power-user plugins",
     "homepage": "https://github.com/ironspite/expert-tribble#readme",
     "bugs": {
         "url": "https://github.com/ironspite/expert-tribble/issues"
@@ -12,7 +12,7 @@
         "url": "git+https://github.com/ironspite/expert-tribble.git"
     },
     "license": "GPL-3.0-or-later",
-    "author": "ironspite",
+    "author": "Promise",
     "scripts": {
         "build": "node --require=./scripts/suppressExperimentalWarnings.js scripts/build/build.mjs",
         "buildStandalone": "pnpm build --standalone",
